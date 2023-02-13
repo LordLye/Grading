@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
 
-    <script src="./js/script.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo logo">
+      <img alt="логотип Drink2Go">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav__list profile-list">
+        <li class="profile-list__item">
+          <a class="profile-list__link">
+            <span class="visually-hidden">Профиль.</span>
+            <svg class="profile-list__svg"></svg>
+          </a>
+        </li>
+        <li class="profile-list__item">
+          <a class="profile-list__link">
+            <span class="visually-hidden">Корзина.</span>
+            <svg class="profile-list__svg"></svg>
+          </a>
+        </li>
+      </ul>
+      <button class="main-nav__toggle button">
+        <span class="visually-hidden">Открыть меню.</span>
+        <svg></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main></main>
+
+  <footer class="main-footer">
+    <section class="main-footer__logo footer-logo">
+      <h2 class="visually-hidden">Логотип Drink2Go.</h2>
+      <img class="footer-logo__img">
+    </section>
+    <section class="main-footer__social social">
+      <h2 class="visually-hidden">Социальные сети.</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <span class="visually-hidden">Vkontakte.</span>
+          <svg></svg>
+        </li>
+        <li class="social__item">
+          <span class="visually-hidden">Pinterest.</span>
+          <svg></svg>
+        </li>
+        <li class="social__item">
+          <span class="visually-hidden">Одноклассники.</span>
+          <svg></svg>
+        </li>
+      </ul>
+    </section>
+    <ul class="main-footer__list">
+      <li class="main-footer__item">
+        <section class="main-footer__market market">
+          <h2>Интернет-магазин</h2>
+          <ul class="market__list">
+            <li class="market__item">
+              <p class="market__text">
+                Каталог
+              </p>
+            </li>
+            <li class="market__item">
+              <p class="market__text">
+                Доставка
+              </p>
+            </li>
+            <li class="market__item">
+              <p class="market__text">
+                Способы оплаты
+              </p>
+            </li>
+            <li class="market__item">
+              <p class="market__text">
+                О нас
+              </p>
+            </li>
+          </ul>
+        </section>
+      </li>
+      <li class="main-footer__item">
+        <section class="main-footer__media media">
+          <h2>Медиа</h2>
+          <ul class="media__list">
+            <li class="media__item">
+              <p class="media__text">
+                Блог
+              </p>
+            </li>
+            <li class="media__item">
+              <p class="media__text">
+                Информация для СМИ
+              </p>
+            </li>
+            <li class="media__item">
+              <p class="media__text">
+                Правовая информация
+              </p>
+            </li>
+          </ul>
+        </section>
+      </li>
+      <li class="main-footer__item">
+        <section class="main-footer__contacts contacts">
+          <h2>Контакты</h2>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <span class="visually-hidden">Адрес.</span>
+              <svg class="contacts__adress-svg"></svg>
+              <address class="contacts__adress-text">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+            </li>
+            <li class="contacts__item">
+              <span class="visually-hidden">Телефон.</span>
+              <svg class="contacts__phone-svg"></svg>
+              <address class="contacts__phone-text">
+                <a class="contacts__phone-link">
+                  +7 (999) 999-99-99
+                </a>
+              </address>
+            </li>
+          </ul>
+        </section>
+      </li>
+    </ul>
+    <section class="main-footer__develop develop">
+      <h2 class="visually-hidden">Develop info.</h2>
+      <p class="develop__text">Разработано в</p>
+      <button class="develop__button">
+        <p class="develop__button-text">HTML Academy</p>
+        <svg class="develop__button-svg"></svg>
+      </button>
+    </section>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>
