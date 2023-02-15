@@ -6,6 +6,7 @@
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="map/leaflet.css">
 </head>
 
 <body class="page__body">
@@ -37,12 +38,14 @@
 
   <main class="main-container">
     <section class="slider">
-      <button class="slider__button">
-        <svg class="slider__svg"></svg>
+      <button class="slider__button button">
+        <svg class="slider__svg" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/icons/stack.svg#arrow-left"></use>
+        </svg>
         <span class="visually-hidden">Переход на предыдущий слайд.</span>
       </button>
       <div class="slider__card">
-        <img class="slider__img" alt="Банка с кофейным напитком">
+        <img class="slider__img" src="/img/flat_white.png" width="280" height="280" alt="Банка с кофейным напитком">
         <p class="slider__badge">Новинка!</p>
         <h2 class="slider__title">Декаф Флэт Уайт</h2>
         <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
@@ -53,8 +56,10 @@
           <button class="slider__order button">Заказать</button>
         </div>
       </div>
-      <button class="slider__button">
-        <svg class="slider__svg"></svg>
+      <button class="slider__button button">
+        <svg class="slider__svg" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/icons/stack.svg#arrow-right"></use>
+        </svg>
         <span class="visually-hidden">Переход на следующий слайд.</span>
       </button>
     </section>
@@ -63,23 +68,31 @@
       <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages-card">
-          <svg class="advantages-card__svg"></svg>
+          <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/stack.svg#clock"></use>
+          </svg>
           <h3 class="advantages-card__title">Скорость</h3>
           <p class="advantages-card__description">Готовый напиток всегда под рукой — просто открой банку</p>
         </li>
         <li class="advantages__item advantages-card">
-          <svg class="advantages-card__svg"></svg>
+          <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/stack.svg#pocket"></use>
+          </svg>
           <h3 class="advantages-card__title">Удобство</h3>
           <p class="advantages-card__description">Легко помещается и в карман,
             и в маленькую сумочку</p>
         </li>
         <li class="advantages__item advantages-card">
-          <svg class="advantages-card__svg"></svg>
+          <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/stack.svg#lightning"></use>
+          </svg>
           <h3 class="advantages-card__title">Бодрость</h3>
           <p class="advantages-card__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
         </li>
         <li class="advantages__item advantages-card">
-          <svg class="advantages-card__svg"></svg>
+          <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/stack.svg#leaf"></use>
+          </svg>
           <h3 class="advantages-card__title">Экологичность</h3>
           <p class="advantages-card__description">Вся упаковка сделана
             из перерабатываемых материалов</p>
@@ -120,68 +133,68 @@
               <label class="control button">
                 <input class="control__input" type="radio" name="milk" value="no-matter" checked>
                 <span class="control__mark"></span>
-                <span class="control__label control__label--font">Неважно</span>
+                <span class="control__label">Неважно</span>
               </label>
             </li>
             <li class="milk__item">
               <label class="control button">
                 <input class="control__input" type="radio" name="milk" value="only-animals">
                 <span class="control__mark"></span>
-                <span class="control__label control__label--font">Только животные</span>
+                <span class="control__label">Только животные</span>
               </label>
             </li>
             <li class="milk__item">
               <label class="control button">
                 <input class="control__input" type="radio" name="milk" value="only-plants">
                 <span class="control__mark"></span>
-                <span class="control__label control__label--font">Только растительное</span>
+                <span class="control__label">Только растительное</span>
               </label>
             </li>
             <li class="milk__item">
               <label class="control button">
                 <input class="control__input" type="radio" name="milk" value="no-milk" disabled>
                 <span class="control__mark"></span>
-                <span class="control__label control__label--font">Без молока</span>
+                <span class="control__label">Без молока</span>
               </label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="filter__country country">
-          <legend class="country__title country__title--font">Страна произрастания</legend>
+          <legend class="country__title">Страна произрастания</legend>
           <ul class="country__list">
             <li class="country__item">
               <label class="control-checkbox button">
                 <input class="control-checkbox__input" type="checkbox" name="Brazil" checked>
                 <span class="control-checkbox__mark"></span>
-                <span class="control-checkbox__label control-checkbox__label--font">Бразилия</span>
+                <span class="control-checkbox__label">Бразилия</span>
               </label>
             </li>
             <li class="country__item">
               <label class="control-checkbox button">
                 <input class="control-checkbox__input" type="checkbox" name="Ethiopia">
                 <span class="control-checkbox__mark"></span>
-                <span class="control-checkbox__label control-checkbox__label--font">Эфиопия</span>
+                <span class="control-checkbox__label">Эфиопия</span>
               </label>
             </li>
             <li class="country__item">
               <label class="control-checkbox button">
                 <input class="control-checkbox__input" type="checkbox" name="Colombia">
                 <span class="control-checkbox__mark"></span>
-                <span class="control-checkbox__label control-checkbox__label--font">Колумбия</span>
+                <span class="control-checkbox__label">Колумбия</span>
               </label>
             </li>
             <li class="country__item">
               <label class="control-checkbox button">
                 <input class="control-checkbox__input" type="checkbox" name="Costa-Rica">
                 <span class="control-checkbox__mark"></span>
-                <span class="control-checkbox__label control-checkbox__label--font">Коста-Рика</span>
+                <span class="control-checkbox__label">Коста-Рика</span>
               </label>
             </li>
             <li class="country__item">
               <label class="control-checkbox button">
                 <input class="control-checkbox__input" type="checkbox" name="Peru" disabled>
                 <span class="control-checkbox__mark"></span>
-                <span class="control-checkbox__label control-checkbox__label--font">Перу</span>
+                <span class="control-checkbox__label">Перу</span>
               </label>
             </li>
           </ul>
@@ -202,79 +215,121 @@
       </div>
       <ul class="catalog__list">
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-white">
+            <img class="card__img" src="/img/catalog/can-white.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-white">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-purple">
+            <img class="card__img" src="/img/catalog/can-purple.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-purple">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-black">
+            <img class="card__img" src="/img/catalog/can-black.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-black">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-pink">
+            <img class="card__img" src="/img/catalog/can-pink.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-pink">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-brown">
+            <img class="card__img" src="/img/catalog/can-brown.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-brown">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
         </li>
         <li class="catalog__item card">
-          <img class="card__img" alt="Банка с кофейным напитком">
-          <h3 class="card__title">Декаф Флэт Уайт</h3>
+          <a href="can-yellow">
+            <img class="card__img" src="/img/catalog/can-yellow.png" width="130" height="188"
+              alt="Банка с кофейным напитком">
+          </a>
+          <a href="can-yellow">
+            <h3 class="card__title">Декаф Флэт Уайт</h3>
+          </a>
           <p class="card__description">Кофе без кофеина из Эфиопии
             с натуральным фермерским молоком</p>
           <div class="card__buy">
             <p class="card__price">225₽</p>
-            <button class="card__button">
-              <svg class="card__button-svg"></svg>
+            <button class="card__button button">
+              <svg class="card__button-svg" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/icons/stack.svg#in-basket"></use>
+              </svg>
               <span class="card__button-description">В корзину</span>
             </button>
           </div>
@@ -283,25 +338,31 @@
       <div class="catalog__pagination pagination">
         <ul class="pagination__list">
           <li class="pagination__item">
-            <svg class="pagination__svg"></svg>
+            <svg class="pagination__svg" width="10" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/stack.svg#arrow-left-pagination"></use>
+            </svg>
           </li>
           <li class="pagination__item">
             <p class="pagination__number">1</p>
           </li>
-          <li class="pagination__item">
+          <li class="pagination__item pagination__item--current">
             <p class="pagination__number">2</p>
           </li>
           <li class="pagination__item">
             <p class="pagination__number">3</p>
           </li>
           <li class="pagination__item">
-            <svg class="pagination__svg"></svg>
+            <svg class="pagination__svg pagination__svg--right" width="10" height="10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icons/stack.svg#arrow-left-pagination"></use>
+            </svg>
           </li>
         </ul>
       </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Магазин Drink2Go на карте</h2>
+      <div class="map__container" id="map"></div>
     </section>
   </main>
 
@@ -424,7 +485,7 @@
     <section class="main-footer__develop develop">
       <h2 class="visually-hidden">Develop info.</h2>
       <p class="develop__text">Разработано в</p>
-      <a class="develop__button button">
+      <a class="develop__button button" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="develop__button-text">HTML Academy</p>
         <svg class="develop__button-svg" width="12" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/icons/stack.svg#logo-academy"></use>
@@ -434,6 +495,28 @@
   </footer>
 
   <script src="./js/script.js" defer></script>
+  <script src="js/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([59.968415, 30.317485], 14);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      minZoom: 18,
+      zoomControl: false,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    }).addTo(map);
+
+    var iconOptions = {
+      iconUrl: 'img/map/map-pin.png',
+      iconSize: [38, 50]
+    }
+    var customIcon = L.icon(iconOptions);
+    var markerOptions = {
+      clickable: true,
+      draggable: true,
+      icon: customIcon,
+    }
+    var marker = L.marker([59.968415, 30.317485], markerOptions);
+    marker.addTo(map);
+  </script>
 </body>
 
 </html>
