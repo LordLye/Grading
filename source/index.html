@@ -391,11 +391,13 @@
   <footer class="main-footer">
     <div class="main-footer__container">
       <div class="main-footer__logo-block">
-        <svg width="82" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/icons/stack.svg#logo-d2g"></use>
-        </svg>
-        <span class="visually-hidden">Логотип Drink2Go</span>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-drink2go.svg" width="170" height="36">
+          <img class="intro__img" src="img/logo-d2g.svg" width="82" height="36"
+            alt="Логотип Drink2Go">
+        </picture>
       </div>
+      <p class="main-footer__text">Интернет-магазин кофейных напитков</p>
       <section class="main-footer__social social">
         <h2 class="visually-hidden">Социальные сети.</h2>
         <ul class="social__list">
