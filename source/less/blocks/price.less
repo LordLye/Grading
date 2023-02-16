@@ -1,0 +1,26 @@
+.price {
+  padding: 0;
+  margin: 0 0 24px;
+  border: none;
+}
+
+.price__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.price__wrapper {
+  position: relative;
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 2px;
+    top: 17px;
+    left: 135px;
+    background: #bdbdbd;
+  }
+}
