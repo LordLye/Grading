@@ -1,0 +1,27 @@
+.nav-user {
+  max-width: 180px;
+}
+
+.nav-user__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  & li:nth-child(2) {
+    margin-right: 60px;
+  }
+}
+
+.nav-user__link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-user--nojs .nav-user__list li:nth-child(2) {
+  margin-right: 0;
+}
+
