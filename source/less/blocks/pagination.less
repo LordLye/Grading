@@ -3,6 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media (min-width: 768px) {
+    justify-content: end;
+  }
 }
 
 .pagination__svg {
@@ -10,6 +14,10 @@
 
   &&--right {
     transform: rotate(180deg);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -25,9 +33,15 @@
   font-size: 16px;
   line-height: 24px;
 
-  &&--current {
+  &--current {
     color: #333333;
     font-weight: 600;
+    background: rgba(255, 255, 255, 0);
+  }
+
+  &--previous,
+  &--next {
+    min-width: 90px;
   }
 }
 
@@ -39,4 +53,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.pagination__previous,
+.pagination__next {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7859cf;
+  }
 }
