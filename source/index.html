@@ -69,15 +69,22 @@
         <span class="visually-hidden">Переход на предыдущий слайд.</span>
       </button>
       <div class="slider__card">
-        <img class="slider__img" src="/img/flat_white.png" width="280" height="280" alt="Банка с кофейным напитком">
-        <p class="slider__badge">Новинка!</p>
-        <h2 class="slider__title">Декаф Флэт Уайт</h2>
-        <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то,
-          что нужно для расслабления после тяжёлого рабочего дня</p>
-        <div class="slider__buy">
-          <p class="slider__price-old">295₽</p>
-          <p class="slider__price">225₽</p>
-          <button class="slider__order button">Заказать</button>
+        <picture class="slider__img">
+          <source media="(min-width: 1440px)" srcset="/img/flat-white-desktop.png" width="600" height="600">
+          <source media="(min-width: 768px)" srcset="/img/flat-white-tablet.png" width="476" height="476">
+          <img src="/img/flat-white.png" width="280" height="280" alt="Банка с кофейным напитком">
+        </picture>
+        <div class="slider__container">
+          <p class="slider__badge">Новинка!</p>
+          <h2 class="slider__title">Декаф Флэт Уайт</h2>
+          <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии<br> с натуральным фермерским
+            молоком — то,
+            что нужно для расслабления после тяжёлого рабочего дня</p>
+          <div class="slider__buy">
+            <p class="slider__price-old">295₽</p>
+            <p class="slider__price">225₽</p>
+            <button class="slider__order button">Заказать</button>
+          </div>
         </div>
       </div>
       <button class="slider__button button">
@@ -86,6 +93,11 @@
         </svg>
         <span class="visually-hidden">Переход на следующий слайд.</span>
       </button>
+      <div class="slider__step-container">
+        <button class="slider__step slider__step--current button" type="button"></button>
+        <button class="slider__step button" type="button"></button>
+        <button class="slider__step button" type="button"></button>
+      </div>
     </section>
     <section class="advantages">
       <p class="advantages__badge">Преимущества</p>
@@ -95,31 +107,39 @@
           <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icons/stack.svg#clock"></use>
           </svg>
+          <div class="advantages-card__container">
           <h3 class="advantages-card__title">Скорость</h3>
           <p class="advantages-card__description">Готовый напиток всегда под рукой — просто открой банку</p>
+          </div>
         </li>
         <li class="advantages__item advantages-card">
           <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icons/stack.svg#pocket"></use>
           </svg>
+          <div class="advantages-card__container">
           <h3 class="advantages-card__title">Удобство</h3>
           <p class="advantages-card__description">Легко помещается и в карман,<br>
             и в маленькую сумочку</p>
+          </div>
         </li>
         <li class="advantages__item advantages-card">
           <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icons/stack.svg#lightning"></use>
           </svg>
+          <div class="advantages-card__container">
           <h3 class="advantages-card__title">Бодрость</h3>
           <p class="advantages-card__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+          </div>
         </li>
         <li class="advantages__item advantages-card">
           <svg class="advantages-card__svg" width="52" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icons/stack.svg#leaf"></use>
           </svg>
+          <div class="advantages-card__container">
           <h3 class="advantages-card__title">Экологичность</h3>
           <p class="advantages-card__description">Вся упаковка сделана<br>
             из перерабатываемых материалов</p>
+          </div>
         </li>
       </ul>
     </section>
@@ -147,84 +167,84 @@
           </label>
         </div>
       </fieldset>
-        </fieldset>
-        <fieldset class="filter__milk milk">
-          <legend class="milk__title">Наличие молока</legend>
-          <ul class="milk__list">
-            <li class="milk__item">
-              <label class="radio-label button">
-                <input class="radio-label__input visually-hidden" type="radio" name="milk" value="no-matter" checked>
-                <span class="radio-label__mark"></span>
-                <span class="radio-label__description">Неважно</span>
-              </label>
-            </li>
-            <li class="milk__item">
-              <label class="radio-label button">
-                <input class="radio-label__input visually-hidden" type="radio" name="milk" value="only-animals">
-                <span class="radio-label__mark"></span>
-                <span class="radio-label__description">Только животные</span>
-              </label>
-            </li>
-            <li class="milk__item">
-              <label class="radio-label button">
-                <input class="radio-label__input visually-hidden" type="radio" name="milk" value="only-plants">
-                <span class="radio-label__mark"></span>
-                <span class="radio-label__description">Только растительное</span>
-              </label>
-            </li>
-            <li class="milk__item">
-              <label class="radio-label button">
-                <input class="radio-label__input visually-hidden" type="radio" name="milk" value="no-milk" disabled>
-                <span class="radio-label__mark"></span>
-                <span class="radio-label__description">Без молока</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="filter__country country">
-          <legend class="country__title">Страна произрастания</legend>
-          <ul class="country__list">
-            <li class="country__item">
-              <label class="checkbox-label button">
-                <input class="checkbox-label__input visually-hidden" type="checkbox" name="Brazil" checked>
-                <span class="checkbox-label__mark"></span>
-                <span class="checkbox-label__description">Бразилия</span>
-              </label>
-            </li>
-            <li class="country__item">
-              <label class="checkbox-label button">
-                <input class="checkbox-label__input visually-hidden" type="checkbox" name="Ethiopia">
-                <span class="checkbox-label__mark"></span>
-                <span class="checkbox-label__description">Эфиопия</span>
-              </label>
-            </li>
-            <li class="country__item">
-              <label class="checkbox-label button">
-                <input class="checkbox-label__input visually-hidden" type="checkbox" name="Colombia">
-                <span class="checkbox-label__mark"></span>
-                <span class="checkbox-label__description">Колумбия</span>
-              </label>
-            </li>
-            <li class="country__item">
-              <label class="checkbox-label button">
-                <input class="checkbox-label__input visually-hidden" type="checkbox" name="Costa-Rica">
-                <span class="checkbox-label__mark"></span>
-                <span class="checkbox-label__description">Коста-Рика</span>
-              </label>
-            </li>
-            <li class="country__item">
-              <label class="checkbox-label button">
-                <input class="checkbox-label__input visually-hidden" type="checkbox" name="Peru" disabled>
-                <span class="checkbox-label__mark"></span>
-                <span class="checkbox-label__description">Перу</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="filter__filter-buttons filter-buttons">
-          <button class="filter-buttons__apply button" type="button">Применить фильтр</button>
-          <button class="filter-buttons__reset button" type="reset">Сбросить фильтр</button>
-        </div>
+      </fieldset>
+      <fieldset class="filter__milk milk">
+        <legend class="milk__title">Наличие молока</legend>
+        <ul class="milk__list">
+          <li class="milk__item">
+            <label class="radio-label button">
+              <input class="radio-label__input visually-hidden" type="radio" name="milk" value="no-matter" checked>
+              <span class="radio-label__mark"></span>
+              <span class="radio-label__description">Неважно</span>
+            </label>
+          </li>
+          <li class="milk__item">
+            <label class="radio-label button">
+              <input class="radio-label__input visually-hidden" type="radio" name="milk" value="only-animals">
+              <span class="radio-label__mark"></span>
+              <span class="radio-label__description">Только животные</span>
+            </label>
+          </li>
+          <li class="milk__item">
+            <label class="radio-label button">
+              <input class="radio-label__input visually-hidden" type="radio" name="milk" value="only-plants">
+              <span class="radio-label__mark"></span>
+              <span class="radio-label__description">Только растительное</span>
+            </label>
+          </li>
+          <li class="milk__item">
+            <label class="radio-label button">
+              <input class="radio-label__input visually-hidden" type="radio" name="milk" value="no-milk" disabled>
+              <span class="radio-label__mark"></span>
+              <span class="radio-label__description">Без молока</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filter__country country">
+        <legend class="country__title">Страна произрастания</legend>
+        <ul class="country__list">
+          <li class="country__item">
+            <label class="checkbox-label button">
+              <input class="checkbox-label__input visually-hidden" type="checkbox" name="Brazil" checked>
+              <span class="checkbox-label__mark"></span>
+              <span class="checkbox-label__description">Бразилия</span>
+            </label>
+          </li>
+          <li class="country__item">
+            <label class="checkbox-label button">
+              <input class="checkbox-label__input visually-hidden" type="checkbox" name="Ethiopia">
+              <span class="checkbox-label__mark"></span>
+              <span class="checkbox-label__description">Эфиопия</span>
+            </label>
+          </li>
+          <li class="country__item">
+            <label class="checkbox-label button">
+              <input class="checkbox-label__input visually-hidden" type="checkbox" name="Colombia">
+              <span class="checkbox-label__mark"></span>
+              <span class="checkbox-label__description">Колумбия</span>
+            </label>
+          </li>
+          <li class="country__item">
+            <label class="checkbox-label button">
+              <input class="checkbox-label__input visually-hidden" type="checkbox" name="Costa-Rica">
+              <span class="checkbox-label__mark"></span>
+              <span class="checkbox-label__description">Коста-Рика</span>
+            </label>
+          </li>
+          <li class="country__item">
+            <label class="checkbox-label button">
+              <input class="checkbox-label__input visually-hidden" type="checkbox" name="Peru" disabled>
+              <span class="checkbox-label__mark"></span>
+              <span class="checkbox-label__description">Перу</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <div class="filter__filter-buttons filter-buttons">
+        <button class="filter-buttons__apply button" type="button">Применить фильтр</button>
+        <button class="filter-buttons__reset button" type="reset">Сбросить фильтр</button>
+      </div>
       </div>
       <div class="catalog__sort sort">
         <p class="sort__description">Сортировка:</p>
@@ -395,8 +415,7 @@
       <div class="main-footer__logo-block">
         <picture>
           <source media="(min-width: 768px)" srcset="img/logo-drink2go.svg" width="170" height="36">
-          <img class="intro__img" src="img/logo-d2g.svg" width="82" height="36"
-            alt="Логотип Drink2Go">
+          <img class="intro__img" src="img/logo-d2g.svg" width="82" height="36" alt="Логотип Drink2Go">
         </picture>
       </div>
       <p class="main-footer__text">Интернет-магазин кофейных напитков</p>
