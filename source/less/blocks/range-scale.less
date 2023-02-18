@@ -39,6 +39,44 @@
   background: #ffffff;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  &:focus::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  &:active::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #7859cf;
+    border-radius: 50%;
+    left: 2px;
+    bottom: 2px;
+  }
+
+  &:disabled {
+    border: 2px solid #bdbdbd;
+    background: #ffffff;
+  }
 }
 
 .range-scale__toggle--min {

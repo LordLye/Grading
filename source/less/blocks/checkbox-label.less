@@ -1,7 +1,7 @@
 .checkbox-label__description {
-  padding-left: 53px;
   font-size: 16px;
   line-height: 24px;
+  padding-left: 53px;
 }
 
 .checkbox-label__input + .checkbox-label__mark::before {
@@ -24,10 +24,92 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 2px;
-  left: 2px;
   background: #ffffff;
   border-radius: 50%;
+  bottom: 2px;
+  left: 2px;
+}
+
+.checkbox-label__input:hover + .checkbox-label__mark {
+  &::before {
+    border: 2px solid #9070ec;
+    background: rgba(120, 89, 207, 0.25);
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    bottom: 2px;
+    left: 2px;
+  }
+}
+
+.checkbox-label__input:focus + .checkbox-label__mark {
+  &::before {
+    border: 2px solid #9070ec;
+    background: rgba(120, 89, 207, 0.25);
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    bottom: 2px;
+    left: 2px;
+  }
+}
+
+.checkbox-label__input:disabled + .checkbox-label__mark {
+  &::before {
+    background: #e2e2e2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    bottom: 2px;
+    left: 2px;
+  }
+}
+
+.checkbox-label__input:disabled:hover + .checkbox-label__mark {
+  &::before {
+    border: none;
+  }
+}
+
+.checkbox-label__input:disabled:checked + .checkbox-label__mark {
+  &::before {
+    background: #e2e2e2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #bdbdbd;
+    border-radius: 50%;
+    bottom: 2px;
+    right: 2px;
+  }
+}
+
+.checkbox-label__input:disabled ~ .checkbox-label__description {
+  color: #e2e2e2;
 }
 
 .checkbox-label__input:checked + .checkbox-label__mark::after {
@@ -35,8 +117,8 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 2px;
-  left: 20px;
   background: #ffffff;
   border-radius: 50%;
+  bottom: 2px;
+  left: 20px;
 }

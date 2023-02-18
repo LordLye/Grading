@@ -21,6 +21,26 @@
   @media (min-width: 1440px) {
     width: 134px;
   }
+
+  &:focus {
+    border: 2px solid #593cac;
+    outline: 0;
+  }
+
+  &:active {
+    border: 2px solid #593cac;
+    outline: 0;
+  }
+
+  &:disabled {
+    background: #f8f8f8;
+    color: #bdbdbd;
+    border: 2px solid #e2e2e2;
+  }
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
 }
 
 .price-label__input-min {
