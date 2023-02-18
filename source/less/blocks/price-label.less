@@ -1,7 +1,7 @@
 .price-label__input {
   width: 118px;
   height: 38px;
-  padding: 7px 10px 7px 25px;
+  padding: 7px 10px;
   border: 2px solid #9070ec;
   border-radius: 4px;
   background: #ffffff;
@@ -11,8 +11,26 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+
+  @media (min-width: 768px) {
+    width: 92px;
+    height: 40px;
+    padding: 8px 10px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 134px;
+  }
 }
 
 .price-label__input-min {
   margin-right: 44px;
+
+  @media (min-width: 768px) {
+    margin-right: 35px;
+  }
+
+  @media (min-width: 1440px) {
+    margin-right: 50px;
+  }
 }

@@ -1,11 +1,15 @@
 .country {
-  padding: 0;
+  padding: 0 0 0 2px;
   margin: 0;
   border: 0;
+
+  @media (min-width: 1440px) {
+    padding-left: 0;
+  }
 }
 
 .country__title {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   padding: 0;
   font-weight: 600;
   font-size: 16px;
@@ -15,7 +19,11 @@
 .country__list {
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
   & li:last-child {
     margin-bottom: 0;

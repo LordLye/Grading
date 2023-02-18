@@ -11,6 +11,8 @@
 
 .pagination__svg {
   padding: 15px;
+  background: #ffffff;
+  border-radius: 4px;
 
   &&--right {
     transform: rotate(180deg);
@@ -24,25 +26,27 @@
 .pagination__item {
   width: 40px;
   height: 40px;
-  background: #ffffff;
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #7859cf;
   font-size: 16px;
   line-height: 24px;
 
-  &--current {
+  &--current button {
     color: #333333;
     font-weight: 600;
     background: rgba(255, 255, 255, 0);
   }
 
-  &--previous,
-  &--next {
+  &--previous {
     @media (min-width: 768px) {
       min-width: 90px;
+    }
+  }
+
+  &--next {
+    @media (min-width: 768px) {
+      min-width: 104px;
     }
   }
 }
@@ -55,6 +59,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 4px;
+  color: #7859cf;
+}
+
+.pagination__button-svg {
+  border: none;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .pagination__previous,
@@ -65,9 +82,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 20px;
     font-size: 16px;
     line-height: 24px;
     color: #7859cf;
+    max-width: 200px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    border: none;
+    padding: 8px 20px;
   }
 }
