@@ -10,6 +10,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: auto;
 
   @media (min-width: 768px) {
     background: #f3ebe1;
@@ -104,6 +105,11 @@
 
   &-active {
     background: #7859cf;
+  }
+
+  &:hover,
+  &:focus {
+    background: rgba(120, 89, 207, 0.25);
   }
 }
 
@@ -223,6 +229,19 @@
   font-size: 16px;
   line-height: 24px;
   max-width: 134px;
+
+  &:hover,
+  &:focus {
+    background: #9070ec;
+  }
+
+  &:active {
+    background: #593cac;
+  }
+
+  &:disabled::after {
+    background: #bdbdbd;
+  }
 }
 
 .swiper .swiper-button-prev::after,
