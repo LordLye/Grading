@@ -37,6 +37,30 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+
+  &:hover {
+    color: #7859cf;
+    fill: #7859cf;
+  }
+
+  &:focus {
+    color: #7859cf;
+    fill: #7859cf;
+    outline: none;
+  }
+
+  &:active {
+    background: #f0ebff;
+    fill: #333333;
+
+    @media (min-width: 768px) {
+      fill: #7859cf;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 20px;
+  }
 }
 
 .nav-user--nojs .nav-user__list li:nth-child(2) {
@@ -45,7 +69,7 @@
 
 .nav-user__item {
   @media (min-width: 1440px) {
-    padding: 0 20px;
+    padding: 0;
   }
 }
 
