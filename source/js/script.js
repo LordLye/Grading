@@ -4,13 +4,10 @@ let navUser = document.querySelector('.nav-user');
 let rangeToggle = document.querySelector('.range-scale__toggle');
 let menuToggle = document.querySelector('.nav-menu__toggle');
 let rangeBar = document.querySelector('.range-scale__bar');
-
 let paginationItem =  document.querySelectorAll('.pagination__item');
 let paginationNumber =  document.querySelectorAll('.pagination__number');
 let paginationPrev =  document.querySelector('.pagination__item--previous');
 let paginationNext =  document.querySelector('.pagination__item--next');
-
-
 
 navMenu.classList.remove('nav-menu--nojs');
 navUser.classList.remove('nav-user--nojs');
