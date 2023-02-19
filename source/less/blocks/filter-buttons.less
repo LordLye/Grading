@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -17,7 +19,7 @@
   border: none;
   color: #ffffff;
   border-radius: 4px;
-  margin-bottom: 24px;
+  padding: 0 5px;
 
   &:hover,
   &:focus {
@@ -38,17 +40,17 @@
   @media (min-width: 768px) {
     margin-bottom: 0;
     margin-left: 180px;
-    margin-right: 29px;
+    gap: 29px;
     width: 148px;
     min-height: 40px;
     font-size: 14px;
-    padding: 0;
+    padding: 3px;
   }
 
   @media (min-width: 1440px) {
     margin-left: 0;
     width: 150px;
-    margin-right: 20px;
+    gap: 20px;
     font-size: 14px;
   }
 }
@@ -62,6 +64,7 @@
   border: none;
   color: #7859cf;
   border-radius: 4px;
+  padding: 0 5px;
 
   &:hover,
   &:focus {
@@ -84,6 +87,6 @@
     width: 138px;
     min-height: 40px;
     font-size: 14px;
-    padding: 0;
+    padding: 3px;
   }
 }

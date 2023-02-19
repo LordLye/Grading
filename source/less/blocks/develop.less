@@ -3,6 +3,7 @@
   display: flex;
   gap: 3px;
   justify-content: center;
+  flex-wrap: wrap;
 
   @media (min-width: 768px) {
     padding: 30px 37px 0 37px;
@@ -29,6 +30,11 @@
   color: #bdbdbd;
   display: flex;
   gap: 6;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .develop__button-svg {

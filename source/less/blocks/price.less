@@ -26,6 +26,11 @@
 .price__wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 
   @media (min-width: 1440px) {
     margin-bottom: 31px;

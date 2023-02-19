@@ -1,7 +1,9 @@
 /* в этот файл добавляет скрипты*/
 let navMenu = document.querySelector('.nav-menu');
 let navUser = document.querySelector('.nav-user');
+let rangeToggle = document.querySelector('.range-scale__toggle');
 let menuToggle = document.querySelector('.nav-menu__toggle');
+let rangeBar = document.querySelector('.range-scale__bar');
 
 navMenu.classList.remove('nav-menu--nojs');
 navUser.classList.remove('nav-user--nojs');

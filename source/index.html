@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="map/leaflet.css">
   <link rel="stylesheet" href="swiper/swiper-bundle.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="page__body">
@@ -66,8 +68,10 @@
 
   <main class="main-container">
     <div class="swiper">
+      <span class="visually-hidden">Слайдер.</span>
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide--white">
+          <span class="visually-hidden">Первый слайд.</span>
           <picture>
             <source media="(min-width: 1440px)" srcset="/img/flat-white-desktop.png, /img/flat-white-desktop@2x.png 2x"
               width="600" height="600">
@@ -90,6 +94,7 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide--purple">
+          <span class="visually-hidden">Второй слайд.</span>
           <picture>
             <source media="(min-width: 1440px)" srcset="/img/flat-pink-desktop.png, /img/flat-pink-desktop@2x.png 2x"
               width="600" height="600">
@@ -111,6 +116,7 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide--black">
+          <span class="visually-hidden">Третий слайд.</span>
           <picture>
             <source media="(min-width: 1440px)" srcset="/img/flat-black-desktop.png, /img/flat-black-desktop@2x.png 2x"
               width="600" height="600">
@@ -125,6 +131,7 @@
             <p class="swiper__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из
               Колумбии покажет вам, что такое настоящая бодрость</p>
             <div class="swiper__buy">
+              <span class="visually-hidden">Старая и новая цены.</span>
               <p class="swiper__price-old">395₽</p>
               <p class="swiper__price">375₽</p>
               <button class="swiper__order button">Заказать</button>
@@ -133,8 +140,12 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
-      <button class="swiper-button-prev"></button>
-      <button class="swiper-button-next"></button>
+      <button class="swiper-button-prev">
+        <span class="visually-hidden">Предыдущий слайд.</span>
+      </button>
+      <button class="swiper-button-next">
+        <span class="visually-hidden">Следующий слайд.</span>
+      </button>
     </div>
 
     <section class="advantages">
@@ -202,9 +213,11 @@
               <div class="price__wrapper">
                 <label class="price-label">
                   <input class="price-label__input price-label__input-min" type="number" value="0" name="min-price" placeholder="0">
+                  <span class="visually-hidden">Минимальная цена.</span>
                 </label>
                 <label class="price-label">
                   <input class="price-label__input price-label__input-max" type="number" value="900" name="max-price" placeholder="0">
+                  <span class="visually-hidden">Максимальная цена.</span>
                 </label>
               </div>
             </fieldset>
@@ -289,7 +302,7 @@
           </div>
         </div>
         <div class="catalog__sort sort">
-          <p class="sort__description">Сортировка:</p>
+          <p class="sort__description">Сортировка&nbsp;:</p>
           <select class="sort__select button" aria-label="Сортировка">
             <option value="default">по умолчанию</option>
             <option value="expensive">сначала дорогие</option>
@@ -420,6 +433,7 @@
           </li>
         </ul>
         <div class="catalog__pagination pagination">
+          <span class="visually-hidden">Переключение страниц каталога.</span>
           <ul class="pagination__list">
             <li class="pagination__item pagination__item--previous button">
               <button class="pagination__button-svg">
