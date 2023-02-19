@@ -1,23 +1,26 @@
 .sort {
   min-width: 280px;
+  padding-left: 3px;
   display: flex;
   flex-direction: row;
-  padding-left: 3px;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 8px;
 
   @media (min-width: 768px) {
     justify-content: end;
+    gap: 10px;
+    padding-left: 0;
   }
 }
 
 .sort__description {
-  margin: 4px 5px auto 0;
+  margin: 4px 0 auto 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #333333;
   word-break: break-word;
+  box-sizing: border-box;
 
   @media (min-width: 1440px) {
     padding-top: 0;
@@ -26,7 +29,7 @@
 }
 
 .sort__select {
-  padding: 4px 25px 4px 8px;
+  padding: 4px 27px 4px 10px;
   max-width: 165px;
   min-height: 24px;
   max-height: 32px;
@@ -40,6 +43,12 @@
   background: url("/img/arrow-down.png") no-repeat;
   background-position: 94% 50%;
   word-break: break-word;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    max-width: 165px;
+    padding: 4px 25px 4px 10px;
+  }
 
   @media (min-width: 1440px) {
     padding: 2px 25px 2px 8px;
