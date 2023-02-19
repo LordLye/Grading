@@ -24,13 +24,22 @@
 }
 
 .pagination__item {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   line-height: 24px;
+
+  @media (min-width: 768px) {
+    max-width: 100px;
+  }
+
+  @media (min-width: 1440px) {
+    max-width: 150px;
+  }
 
   &--current .pagination__number {
     color: #333333;
@@ -103,7 +112,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #7859cf;
-    max-width: 200px;
+    max-width: 300px;
     background-color: #ffffff;
     border-radius: 4px;
     border: none;

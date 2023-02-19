@@ -64,6 +64,11 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .card__price {
@@ -84,6 +89,8 @@
   align-items: center;
   border: none;
   gap: 6px;
+  align-self: self-start;
+  flex-wrap: wrap;
 
   &:hover,
   &:focus {
