@@ -1,6 +1,8 @@
 /* в этот файл добавляет скрипты*/
 let navMenu = document.querySelector('.nav-menu');
 let navUser = document.querySelector('.nav-user');
+let mapPicture = document.querySelector('.map__container--no-js');
+let mapContainer = document.querySelector('.map__container');
 let rangeToggle = document.querySelector('.range-scale__toggle');
 let menuToggle = document.querySelector('.nav-menu__toggle');
 let rangeBar = document.querySelector('.range-scale__bar');
@@ -11,6 +13,8 @@ let paginationNext =  document.querySelector('.pagination__item--next');
 
 navMenu.classList.remove('nav-menu--nojs');
 navUser.classList.remove('nav-user--nojs');
+mapPicture.style.display = 'none';
+mapContainer.style.display = 'block'
 
 menuToggle.addEventListener('click', function () {
   if (navMenu.classList.contains('nav-menu--closed')) {
