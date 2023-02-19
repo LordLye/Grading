@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="swiper/swiper-bundle.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo logo" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" srcset="./img/logo-drink2go.svg">
-        <source media="(min-width: 768px)" srcset="./img/logo-d2g.svg">
+        <source media="(min-width: 1440px)" srcset="./img/logo-drink2go.svg" width="170" height="36">
+        <source media="(min-width: 768px)" srcset="./img/logo-d2g.svg" width="82" height="36">
         <img class="logo__image" src="./img/logo-small.svg" width="32" height="36" alt="Логотип Drink2Go">
       </picture>
     </a>
@@ -73,6 +74,12 @@
         <div class="swiper-slide swiper-slide--white">
           <span class="visually-hidden">Первый слайд.</span>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="/img/flat-white-desktop.webp 1x, /img/flat-white-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="/img/flat-white-tablet.webp 1x, /img/flat-white-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="/img/flat-white-tablet.webp 1x, /img/flat-white-tablet@2x.webp 2x"
+              width="280" height="280">
             <source media="(min-width: 1440px)" srcset="/img/flat-white-desktop.png, /img/flat-white-desktop@2x.png 2x"
               width="600" height="600">
             <source media="(min-width: 768px)" srcset="/img/flat-white-tablet.png, /img/flat-white-tablet@2x.png 2x"
@@ -96,6 +103,12 @@
         <div class="swiper-slide swiper-slide--purple">
           <span class="visually-hidden">Второй слайд.</span>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="/img/flat-pink-desktop.webp 1x, /img/flat-pink-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="/img/flat-pink-tablet.webp 1x, /img/flat-pink-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="/img/flat-pink-tablet.webp 1x, /img/flat-pink-tablet@2x.webp 2x"
+              width="280" height="280">
             <source media="(min-width: 1440px)" srcset="/img/flat-pink-desktop.png, /img/flat-pink-desktop@2x.png 2x"
               width="600" height="600">
             <source media="(min-width: 768px)" srcset="/img/flat-pink-tablet.png, /img/flat-pink-tablet@2x.png 2x"
@@ -118,6 +131,12 @@
         <div class="swiper-slide swiper-slide--black">
           <span class="visually-hidden">Третий слайд.</span>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="/img/flat-black-desktop.webp 1x, /img/flat-black-desktop@2x.webp 2x" width="600" height="600">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="/img/flat-black-tablet.webp 1x, /img/flat-black-tablet@2x.webp 2x" width="476" height="476">
+            <source type="image/webp" srcset="/img/flat-black-tablet.webp 1x, /img/flat-black-tablet@2x.webp 2x"
+              width="280" height="280">
             <source media="(min-width: 1440px)" srcset="/img/flat-black-desktop.png, /img/flat-black-desktop@2x.png 2x"
               width="600" height="600">
             <source media="(min-width: 768px)" srcset="/img/flat-black-tablet.png, /img/flat-black-tablet@2x.png 2x"
@@ -212,11 +231,13 @@
               </div>
               <div class="price__wrapper">
                 <label class="price-label">
-                  <input class="price-label__input price-label__input-min" type="number" value="0" name="min-price" placeholder="0">
+                  <input class="price-label__input price-label__input-min" type="number" value="0" name="min-price"
+                    placeholder="0">
                   <span class="visually-hidden">Минимальная цена.</span>
                 </label>
                 <label class="price-label">
-                  <input class="price-label__input price-label__input-max" type="number" value="900" name="max-price" placeholder="0">
+                  <input class="price-label__input price-label__input-max" type="number" value="900" name="max-price"
+                    placeholder="0">
                   <span class="visually-hidden">Максимальная цена.</span>
                 </label>
               </div>
@@ -313,8 +334,12 @@
         <ul class="catalog__list">
           <li class="catalog__item card">
             <a href="can-white">
-              <img class="card__img" src="/img/catalog/can-white.png" srcset="/img/catalog/can-white@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-white.webp 1x, /img/catalog/can-white@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-white.png" srcset="/img/catalog/can-white@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-white">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -333,8 +358,12 @@
           </li>
           <li class="catalog__item card">
             <a href="can-purple">
-              <img class="card__img" src="/img/catalog/can-purple.png" srcset="/img/catalog/can-purple@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-purple.webp 1x, /img/catalog/can-purple@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-purple.png" srcset="/img/catalog/can-purple@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-purple">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -353,8 +382,12 @@
           </li>
           <li class="catalog__item card">
             <a href="can-black">
-              <img class="card__img" src="/img/catalog/can-black.png" srcset="/img/catalog/can-black@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-black.webp 1x, /img/catalog/can-black@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-black.png" srcset="/img/catalog/can-black@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-black">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -373,8 +406,12 @@
           </li>
           <li class="catalog__item card">
             <a href="can-pink">
-              <img class="card__img" src="/img/catalog/can-pink.png" srcset="/img/catalog/can-pink@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-pink.webp 1x, /img/catalog/can-pink@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-pink.png" srcset="/img/catalog/can-pink@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-pink">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -393,8 +430,12 @@
           </li>
           <li class="catalog__item card">
             <a href="can-brown">
-              <img class="card__img" src="/img/catalog/can-brown.png" srcset="/img/catalog/can-brown@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-brown.webp 1x, /img/catalog/can-brown@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-brown.png" srcset="/img/catalog/can-brown@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-brown">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -413,8 +454,12 @@
           </li>
           <li class="catalog__item card">
             <a href="can-yellow">
-              <img class="card__img" src="/img/catalog/can-yellow.png" srcset="/img/catalog/can-yellow@2x.png 2x"
-                width="130" height="188" alt="Банка с кофейным напитком">
+              <picture>
+                <source type="image/webp" srcset="/img/catalog/can-yellow.webp 1x, /img/catalog/can-yellow@2x.webp 2x"
+                  width="130" height="188">
+                <img class="card__img" src="/img/catalog/can-yellow.png" srcset="/img/catalog/can-yellow@2x.png 2x"
+                  width="130" height="188" alt="Банка с кофейным напитком">
+              </picture>
             </a>
             <a href="can-yellow">
               <h3 class="card__title">Декаф Флэт Уайт</h3>
@@ -605,10 +650,10 @@
       <p class="develop__text">Разработано в</p>
       <a class="develop__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="develop__button-text">HTML Academy
-        <svg class="develop__button-svg" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
-          <use xlink:href="img/icons/stack.svg#logo-academy"></use>
-        </svg>
-      </span>
+          <svg class="develop__button-svg" width="12" height="16" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/icons/stack.svg#logo-academy"></use>
+          </svg>
+        </span>
       </a>
     </section>
   </footer>
@@ -616,27 +661,6 @@
   <script src="./js/script.js" defer></script>
   <script src="js/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script>
-    var map = L.map('map').setView([59.968415, 30.317485], 14);
-    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
-      minZoom: 18,
-      zoomControl: false,
-      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-    }).addTo(map);
-
-    var iconOptions = {
-      iconUrl: 'img/map/map-pin.png',
-      iconSize: [38, 50]
-    }
-    var customIcon = L.icon(iconOptions);
-    var markerOptions = {
-      clickable: true,
-      draggable: true,
-      icon: customIcon,
-    }
-    var marker = L.marker([59.968413, 30.317570], markerOptions);
-    marker.addTo(map);
-  </script>
 </body>
 
 </html>

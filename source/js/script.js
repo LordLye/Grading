@@ -105,5 +105,22 @@ paginationNext.addEventListener('click', function() {
   paginationPrev.style.visibility = "visible";
 })
 
+var map = L.map('map').setView([59.968415, 30.317485], 14);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      minZoom: 18,
+      zoomControl: false,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    }).addTo(map);
 
-
+    var iconOptions = {
+      iconUrl: 'img/map/map-pin.png',
+      iconSize: [38, 50]
+    }
+    var customIcon = L.icon(iconOptions);
+    var markerOptions = {
+      clickable: true,
+      draggable: true,
+      icon: customIcon,
+    }
+    var marker = L.marker([59.968413, 30.317570], markerOptions);
+    marker.addTo(map);
