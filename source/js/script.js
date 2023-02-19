@@ -4,13 +4,10 @@ let navUser = document.querySelector('.nav-user');
 let rangeToggle = document.querySelector('.range-scale__toggle');
 let menuToggle = document.querySelector('.nav-menu__toggle');
 let rangeBar = document.querySelector('.range-scale__bar');
-
 let paginationItem =  document.querySelectorAll('.pagination__item');
 let paginationNumber =  document.querySelectorAll('.pagination__number');
 let paginationPrev =  document.querySelector('.pagination__item--previous');
 let paginationNext =  document.querySelector('.pagination__item--next');
-
-
 
 navMenu.classList.remove('nav-menu--nojs');
 navUser.classList.remove('nav-user--nojs');
@@ -108,5 +105,22 @@ paginationNext.addEventListener('click', function() {
   paginationPrev.style.visibility = "visible";
 })
 
+var map = L.map('map').setView([59.968415, 30.317485], 14);
+    L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+      minZoom: 18,
+      zoomControl: false,
+      subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+    }).addTo(map);
 
-
+    var iconOptions = {
+      iconUrl: 'img/map/map-pin.png',
+      iconSize: [38, 50]
+    }
+    var customIcon = L.icon(iconOptions);
+    var markerOptions = {
+      clickable: true,
+      draggable: true,
+      icon: customIcon,
+    }
+    var marker = L.marker([59.968413, 30.317570], markerOptions);
+    marker.addTo(map);
